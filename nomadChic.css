@@ -7,7 +7,7 @@ ul#menu li {
 }
 
 ul#menu li a {
-	margin-top: 1000px;
+	/*margin-top: 1000px;*/
     background-color: #008AB8;
     color: white;
     padding: 10px 20px;

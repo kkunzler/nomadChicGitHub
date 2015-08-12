@@ -15,9 +15,16 @@ function tempList(){
 }	
 //This is for the function that creates the individual lists for all users
 function makeList(){
+	//Tabletop.makeList({key: 'iedukj', callback: function(data,tabletop){console.log('essentials')}, simpleSheet:true})
 	//Put the essentials here*******
 	//Call Medical
 	//Call Hygiene
+	//The stuff below is code that could bring in the spreadsheet
+	/*function init() {
+  Tabletop.init( { key: '0AmYzu_s7QHsmdDNZUzRlYldnWTZCLXdrMXlYQzVxSFE',
+                   callback: function(data, tabletop) { console.log(data) },
+                   simpleSheet: true } )
+}*/
 	//Call Electronics
 	//This is for if it is a female
 	if (gender=="Female") {

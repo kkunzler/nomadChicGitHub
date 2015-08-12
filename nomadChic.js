@@ -2,18 +2,18 @@
 
 var gender;
 var temp;
-
+//This is for the function that creates the male female thing
 function packingList(){
 	var gender= document.getElementById("who").value;
  	console.log(gender);
 }
 
-
+//This is for the temperature lists
 function tempList(){
 	var temp= document.getElementById("tempe").value;
  	console.log(temp);
 }	
-
+//This is for the function that creates the individual lists for all users
 function makeList(){
 	//Put the essentials here*******
 	//Call Medical

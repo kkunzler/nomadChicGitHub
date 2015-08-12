@@ -51,9 +51,9 @@
 		  	<h1>Welcome to NomadChic!</h1>
 			
 			<label for='Who Are You'>Select your gender:</label><br>
-			<select name="who"> 
-			  <option value="Male" >Male</option>
-			  <option value="Female" >Female</option>
+			<select id="who"> 
+			  <option value="Male">Male</option>
+			  <option value="Female">Female</option>
 			</select>
 			<br><br>
 
@@ -65,7 +65,19 @@
 			<input type='menu' name='when' id='when'>
 			<br><br>
 
-			<a href="#listpage">Start Your Packing List</a>
+
+			<form action="">
+			<input type="checkbox" name="weather" value="95+">Blazing Hot<br>
+			<input type="checkbox" name="weather" value="80-95">Hot<br>
+			<input type="checkbox" name="weather" value="70-80">Warm<br>
+			<input type="checkbox" name="weather" value="50-70">Cool<br>
+			<input type="checkbox" name="weather" value="30-50">Cold<br>
+			<input type="checkbox" name="weather" value="30-">Frigid<br>
+			</form>
+
+			<!--<button type= "button" onclick="packingList()">Start Your Packing List</button>-->
+
+			<a href="#listpage" onclick="packingList()"> Start Your Packing List</a>
 
 
 		  </div>

@@ -26,6 +26,8 @@ function makeList(){
                    simpleSheet: true } )
 }*/
 	//Call Electronics
+	// Should the variables for make and female be different to avoid confusion?
+	// or are they the same so they do the same things?
 	//This is for if it is a female
 	if (gender=="Female") {
 		//Call fEssentials

@@ -1,3 +1,4 @@
+/*"All items with thwe # menu are for the header menu at the top of the page*/
 ul#menu {
     padding: 5;
 }
@@ -19,11 +20,15 @@ ul#menu li a:hover {
     background-color: #FFFFCC;
 }
 
+/*Makes item float to the center of the page*/
+/*Not working currently*/
 #floatCenter
 {
 	float: center;
 }
 
+/*Makes button in the middle of the page*/
+/*Not working currently*/
 .floatingbuttons
 {
 	margin: auto;

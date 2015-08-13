@@ -6,20 +6,22 @@
 	  <script type="text/javascript" src="tabletop.js"></script>
 	  <meta charset="utf-8">
 
-			<!--load jQuery-->
-		    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	  <!--load jQuery-->
+	  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 
-		    <!-- Load jQuery Mobile -->
-		    <script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+	  <!-- Load jQuery Mobile -->
+	  <script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
 
-		    <!-- Mobile Stylesheet -->
-		    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
+	  <!-- Mobile Stylesheet -->
+	  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
 
 	</head>
 
 	<body>
+		<!-- Creates new page called mainpage -->
 		<div data-role="page" id="mainpage">
 		  <div data-role="main" class="ui-content">
+		  		<!-- This is the header menu -->
 		  		<ul id="menu">
 		  			<br>
 		  			<li><a href="#mainpage">Main Page</a></li>
@@ -29,6 +31,7 @@
 					<li><a href="#aboutus">About Us</a></li>
 					<li><a href="#settings">Settings</a></li>
 				</ul>
+				<!-- This will later contain other things -->
 		  	<h1><center>Welcome to NomadChic!</h1>
 			<p><center>This main page is coming soon!</p>
 
@@ -37,9 +40,10 @@
 		  </div>
 		  </div>
 		</div>
-		<!--This is for setting up the main page-->
+		<!-- Creates new page called Add Trip-->
 		<div data-role="page" id="addtrip">
 		  <div data-role="main" class="ui-content">
+		  	<!-- This is the header menu -->
 		  	<ul id="menu">
 		  			<br>
 		  			<li><a href="#mainpage">Main Page</a></li>
@@ -85,12 +89,13 @@
 
 			<a href="#listpage" onclick="packingList(), tempList()"> Start Your Packing List</a>
 
-
 		  </div>
 		</div>
 
+		<!-- Creates new page called Create Account -->
 		<div data-role="page" id="createaccount">
 		  <div data-role="main" class="ui-content">
+		  	<!-- This is the header menu -->
 		  	<ul id="menu">
 		  			<br>
 		  			<li><a href="#mainpage">Main Page</a></li>
@@ -100,12 +105,16 @@
 					<li><a href="#aboutus">About Us</a></li>
 					<li><a href="#settings">Settings</a></li>
 				</ul>
+				<!-- THis will later contain a sign up through google plus -->
 		  	<h1>Welcome to NomadChic!</h1>
 			<p>This create account page is coming soon!</p>
 		  </div>
 		</div> 
+
+		<!-- Creates a new page called Sign In -->
 		<div data-role="page" id="signin">
 		  <div data-role="main" class="ui-content">
+		  	<!-- This is the header menu -->
 		  	<ul id="menu">
 		  			<br>
 		  			<li><a href="#mainpage">Main Page</a></li>
@@ -115,14 +124,17 @@
 					<li><a href="#aboutus">About Us</a></li>
 					<li><a href="#settings">Settings</a></li>
 				</ul>
+			<!-- This will later have a sign in through google plus -->
 		  	<h1>Welcome to NomadChic!</h1>
 			<p>This sign in page is coming soon!</p>
 
 		  </div>
 		</div>
 
+		<!-- Creates a new page called About Us -->
 		<div data-role="page" id="aboutus">
 		  <div data-role="main" class="ui-content">
+		  	<!-- This is the header menu -->
 		  	<ul id="menu">
 		  			<br>
 		  			<li><a href="#mainpage">Main Page</a></li>
@@ -132,14 +144,17 @@
 					<li><a href="#aboutus">About Us</a></li>
 					<li><a href="#settings">Settings</a></li>
 				</ul>
+			<!-- This will later contain short bios and possibly pictures of us -->
 		  	<h1>Welcome to NomadChic!</h1>
 			<p>We are four girls who attended/attending Girls Who Code 2015 at Adobe Seattle in the summer of 2015</p>
 
 		  </div>
 		</div>
 
+		<!-- Creates a new page called Settings -->
 		<div data-role="page" id="settings">
 		  <div data-role="main" class="ui-content">
+		  	<!-- This is the header menu -->
 		  	<ul id="menu">
 		  			<br>
 		  			<li><a href="#mainpage">Main Page</a></li>
@@ -149,14 +164,16 @@
 					<li><a href="#aboutus">About Us</a></li>
 					<li><a href="#settings">Settings</a></li>
 				</ul>
+			<!-- This will later contain options for changing the color scheme, your password, and other things -->
 		  	<h1>Welcome to NomadChic!</h1>
 			<p>This settings page is coming soon!</p>
 		  </div>
 		</div>
 
-
+		<!-- Creates a new page called List Page -->
 		<div data-role="page" id="listpage">
 			<div data-role="main" class="ui-content">
+				<!-- This is the header menu -->
 				<ul id="menu">
 		  			<br>
 		  			<li><a href="#mainpage">Main Page</a></li>
@@ -166,23 +183,25 @@
 					<li><a href="#aboutus">About Us</a></li>
 					<li><a href="#settings">Settings</a></li>
 				</ul>
-
+				<!-- This will later contain the packing list made from the user's input -->
 				<p>This will be the packing list. We'll add stuff soon.</p>
 
 			</div>
 		<div>
 
 
-
-		<div data-role="page" id="settings">
+			<!-- DO WE NEED THIS? -->
+		<!-- <div data-role="page" id="settings">
 			<p>This will be your packing list</p>
-		</div>
+		</div> -->
 
 
 	</body>
-
+	<!-- Loads Processing Javascript -->
 	<script type="text/javascript" src="processing-1.4.1.js"></script>
+	<!-- Loads JQuery -->
     <script src="jquery-1.11.3.js"></script>
+    <!-- Loads Local JS file -->
 	<script type="text/javascript" src="nomadChic.js"></script>
 
 </html>

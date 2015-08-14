@@ -3,6 +3,19 @@ ul#menu {
     padding: 5;
 }
 
+
+/*.ui-mobile .type-home .ui-content { 
+    background: white url("oldSuitcases.jpg"); 
+    background-repeat: no-repeat; background-position: 50% 80%; /*50% 80% mozilla optimized*/ 
+    /*background-attachment: fixed; 
+    background-size: 50%; /*50% mozilla optimized */ 
+
+
+.ui-page{
+    background:url("oldSuitcases.jpg") no-repeat;
+    background-size:cover;
+}
+
 ul#menu li {
     display: inline;
 }
@@ -37,9 +50,39 @@ ul#menu li a:hover {
 	border-radius: 5px;
 }
 
+
+#mainpage {
+    background-color:transparent;
+    color:black;
+    text-align:center;
+    padding:5px;
+}
+#menu {
+    line-height:30px;
+    background-color:transparent;
+    height:400px;
+    width:200px;
+    float:left;
+    padding:5px; 
+}
+#section {
+    width:350px;
+    float:left;
+    padding:10px; 
+}
+#footer {
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:5px; 
+}
+
+
 /*These all apply only to the p tag.  Makes the font a sans-serif font.
   Aligns the text to the center.  Sets top and bottom margins to 2%.  
   Sets left and right margins to 20%.  */
+
 p
 {
     font-family: Arial, Helvetica, sans-serif;

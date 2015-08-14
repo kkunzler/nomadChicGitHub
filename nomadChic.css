@@ -1,4 +1,4 @@
-/*"All items with thwe # menu are for the header menu at the top of the page*/
+/*"All items with the #menu are for the header menu at the top of the page*/
 ul#menu {
     padding: 5;
 }
@@ -37,3 +37,13 @@ ul#menu li a:hover {
 	border-radius: 5px;
 }
 
+p
+{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+h1
+{
+    text-align: center;
+}

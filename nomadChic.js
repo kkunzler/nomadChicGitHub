@@ -7,12 +7,15 @@
     console.log(feed);
     feed.run();
 
+
 var gender;
 var temp;
-//This is for the function that creates the male female thing
+//This is for the function that creates the male female thing and prints the location
 function packingList(){
 	var gender= document.getElementById("who").value;
+	var loc=document.getElementById("where").value;
  	console.log(gender);
+ 	console.log(loc);
 }
 
 //This is for the temperature lists

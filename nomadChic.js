@@ -1,4 +1,34 @@
 //api.openweathermap.org/data/2.5/forecast?q={city name},{country code}
+   var loc=document.getElementById("dest").value;
+   console.log(loc);
+
+
+
+
+    $(document).ready(function() {
+  $.simpleWeather({
+    location: 'loc', //2357536
+    woied:'',
+    unit: 'f',
+    success: function(weather) {
+      html = '<h2>'+weather.temp+'&deg;'+weather.units.temp+'</h2>';
+      html += '<ul><li>'+weather.city+', '+weather.region+'</li>';
+      html += '<li class="currently">'+weather.currently+'</li>';
+      html += '<li>'+weather.alt.temp+'&deg;C</li></ul>';
+      
+      for(var i=0;i<weather.forecast.length;i++) {
+        html += '<p>'+weather.forecast[i].day+': '+weather.forecast[i].high+'</p>';
+      }
+  
+      $("#weather").html(html);
+    },
+    error: function(error) {
+      $("#weather").html('<p>'+error+'</p>');
+    }
+  });
+});
+
+
     var feed = new Instafeed({
         get: 'tagged',
         tagName: 'outfitoftheday',
@@ -13,9 +43,9 @@ var temp;
 //This is for the function that creates the male female thing and prints the location
 function packingList(){
 	var gender= document.getElementById("who").value;
-	var loc=document.getElementById("where").value;
+	//var loc=document.getElementById("place,state").value;
  	console.log(gender);
- 	console.log(loc);
+ 	//console.log(loc);
 }
 
 //This is for the temperature lists
@@ -64,19 +94,15 @@ function tempList(){
 function showInfo(data, tabletop) {
     alert("Successfully processed!")
 
-    //while (test(data)){
 
 	    var el = document.getElementById("myList");
 	    console.log(data);
 	  	for (var i = 0; i < data.length; i++) {
 	    	el.innerHTML += data[i].Essentials;
 	    	console.log(data[i].Essentials);
-	    	//console.log(data[i].Electronics);
-	    	//console.log(data[i].Medical);
-	    	//console.log(data[i].Hygiene);
 	  	}
 	}  	
-//}
+
 
   function init1() {
     Tabletop.init( { key: public_spreadsheet_url,

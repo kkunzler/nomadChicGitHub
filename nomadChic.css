@@ -117,5 +117,6 @@ h1
     margin-left:15px;
 }
 body {
-  background-image: url("oldSuitcases.jpg") !important;
+  background-image: url("oldSuitcases.jpg");
+  console.log("background working");
 }

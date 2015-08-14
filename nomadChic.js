@@ -11,13 +11,14 @@ var gender;
 var temp;
 //This is for the function that creates the male female thing
 function packingList(){
-	var gender= document.getElementById("who").value;
+	gender= document.getElementById("who").value;
  	console.log(gender);
 }
 
+
 //This is for the temperature lists
 function tempList(){
-	var temp= document.getElementById("tempe").value;
+	temp= document.getElementById("tempe").value;
  	console.log(temp);
 }	
 
@@ -56,7 +57,7 @@ function tempList(){
 // 		return true;
 // 	}
 // }
-
+var essentialsList=[];
   //This shows the essentials list
 function showInfo(data, tabletop) {
     alert("Successfully processed!")
@@ -68,10 +69,10 @@ function showInfo(data, tabletop) {
 	  	for (var i = 0; i < data.length; i++) {
 	    	el.innerHTML += data[i].Essentials;
 	    	console.log(data[i].Essentials);
-	    	//console.log(data[i].Electronics);
-	    	//console.log(data[i].Medical);
-	    	//console.log(data[i].Hygiene);
+	    	
+	    	essentialsList.push(data[i].Essentials);
 	  	}
+		makeList();  	
 	}  	
 //}
 
@@ -87,68 +88,74 @@ function showInfo(data, tabletop) {
     var el = document.getElementById("myList");
     console.log(data);
   	for (var i = 0; i < data.length; i++) {
-    	el.innerHTML += data[i].Electronics;
-    	console.log(data[i].Electronics);
+    	el.innerHTML += data[i].fEssentials;
+    	console.log(data[i].fEssentials);
   	}
   }
+
+function makeList(){ 
 
   //showInfo(Essentials,tabletop);
 	//Call Electronics
 	//This is for if it is a female
 	if (gender=="Female") {
+
+		alert('Female packing list will be activated');
+		console.log(essentialsList);
 		//Call fEssentials
 		//Call fHygiene
 		//This is for the temperature Blazing
 		if (temp=="B"){
-
+			alert('Blazing packing list will be activated');
 		}
 		//This is for the temperature Hot
 		else if (temp=="H"){
-
+			alert('Hot packing list will be activated');
 		}
 		//This will pull the list for Warm
 		else if (temp=="W"){
-
+			alert('Warm packing list will be activated');
 		}
 		//This will pull the list for Cool
 		else if (temp=="Cl"){
-
+			alert('Cool packing list will be activated');			
 		}
 		//This will pull the list for Cold
 		else if (temp=="Cd"){
-
+			alert('Cold packing list will be activated');
 		}
 		//This will pull the list for Frigid
 		else{
-
+			alert('Frigid packing list will be activated');
 		}
 	}
 	//This is for if it is a male
 	else {
+		alert('Male packing list will be activated');
 		//Call mEssentials
 		//This is for the temperature Blazing
 		if (temp=="B"){
-
+			alert('Blazing packing list will be activated');
 		}
 		//This is for the temperature Hot
 		else if (temp=="H"){
-
+			alert('Hot packing list will be activated');
 		}
 		//This will pull the list for Warm
 		else if (temp=="W"){
-
+			alert('Warm packing list will be activated');
 		}
 		//This will pull the list for Cool
 		else if (temp=="Cl"){
-
+			alert('Cool packing list will be activated');
 		}
 		//This will pull the list for Cold
 		else if (temp=="Cd"){
-
+			alert('Cold packing list will be activated');
 		}
 		//This will pull the list for Frigid
 		else{
-
+			alert('Frigid packing list will be activated');
 		}
 	}
-
+}

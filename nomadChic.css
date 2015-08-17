@@ -59,6 +59,13 @@ h1
     color: white;
 }
 
+h2
+{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 45px;
+}
+
 h4
 {
     margin: 3px;
@@ -133,7 +140,7 @@ body {
     padding: 10px;
     z-index:0;
     opacity:0.8;
-    margin-top: 60px;
+    margin: 60px 0px 10px;
 }
 
 /*Makes button in the middle of the page*/

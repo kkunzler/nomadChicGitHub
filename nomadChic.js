@@ -38,13 +38,17 @@
     feed.run();
 
 
+
+///////////////////////////////////////////////////////////////
+
+
 var gender;
 var temp;
 //This is for the function that creates the male female thing and prints the location
 function packingList(){
-	var gender= document.getElementById("who").value;
+
+	gender= document.getElementById("who").value;
  	console.log(gender);
- 	//console.log(loc);
 }
 
 
@@ -54,21 +58,7 @@ function tempList(){
  	console.log(temp);
 }	
 
-//var spreadsheet="https://docs.google.com/spreadsheets/d/1eDDhMYGf9UVa8BcxHzRHeRxennwnP3GVauADiPr3OTk/pubhtml"
-//This is for the function that creates the individual lists for all users
 
-// function makeList(){
-// 	var tabletop=Tabletop.makeList({key: spreadsheet, callback: showInfo, simpleSheet:true})
-// 	  window.onload = function() { makeList()};
-// 	}
-	//Put the essentials here*******
-	//Call Medical
-	//Call Hygiene
-	//The stuff below is code that could bring in the spreadsheet
-// function showInfo(Essentials, tabletop) {
-//     alert("Successfully processed!")
-//     console.log(Essentials);
-//   }
   var data;
   var tabletop;
   // window.onload = function() { init() };
@@ -76,7 +66,7 @@ function tempList(){
   var public_spreadsheet_url = "https://docs.google.com/spreadsheets/d/1eDDhMYGf9UVa8BcxHzRHeRxennwnP3GVauADiPr3OTk/pubhtml";
   function init() {
     Tabletop.init( { key: public_spreadsheet_url,
-                     callback: showInfo,
+                     callback: makeList,
                      simpleSheet: true } )
   }
 
@@ -90,40 +80,37 @@ function tempList(){
 // 	}
 // }
 var essentialsList=[];
-  //This shows the essentials list
-function showInfo(data, tabletop) {
-    alert("Successfully processed!")
-
-
-	    var el = document.getElementById("myList");
-	    console.log(data);
-	  	for (var i = 0; i < data.length; i++) {
-	    	el.innerHTML += data[i].Essentials;
-	    	console.log(data[i].Essentials);
-	    	essentialsList.push(data[i].Essentials);
-	  	}
-		makeList();  	
-	}  	
-
-
-  function init1() {
-    Tabletop.init( { key: public_spreadsheet_url,
-                     callback: showInfo1,
-                     simpleSheet: true } )
-  }
+var fEssentialsList=[];
 
   //This shows the essentials list
-  function showInfo1(data, tabletop) {
-    alert("Successfully processed!")
-    var el = document.getElementById("myList");
-    console.log(data);
-  	for (var i = 0; i < data.length; i++) {
-    	el.innerHTML += data[i].fEssentials;
-    	console.log(data[i].fEssentials);
-  	}
-  }
+function showEssentialsInfo(data, tabletop) {
+    alert("Essentials")
 
-function makeList(){ 
+		var el = document.getElementById("myList");
+	 	console.log(data);
+		for (var i = 0; i < data.length; i++) {
+			el.innerHTML += "<label for='newsletter'>Essentials</label><br><input type='checkbox' name='newsletter' id='newsletter'>" + data[i].Essentials;
+			console.log(data[i].Essentials);	
+		 	essentialsList.push(data[i].Essentials);
+	 	}	
+}
+
+function showfEssentialsInfo(data, tabletop) {
+    alert("fEssentials")
+
+		var el = document.getElementById("myList");
+	 	console.log(data);
+		for (var i = 0; i < data.length; i++) {
+			el.innerHTML += "<label for='newsletter'>fEssentials</label><br><input type='checkbox' name='newsletter' id='newsletter'>" + data[i].fEssentials;
+			console.log(data[i].fEssentials);	
+		 	fEssentialsList.push(data[i].fEssentials);
+	 	}	
+}
+
+
+
+function makeList(data, tabletop){ 
+	showEssentialsInfo(data, tabletop);
 
   //showInfo(Essentials,tabletop);
 	//Call Electronics
@@ -131,7 +118,8 @@ function makeList(){
 	if (gender=="Female") {
 
 		alert('Female packing list will be activated');
-		console.log(essentialsList);
+		
+		showfEssentialsInfo(data, tabletop);
 		//Call fEssentials
 		//Call fHygiene
 		//This is for the temperature Blazing

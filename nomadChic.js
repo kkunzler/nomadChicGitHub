@@ -44,7 +44,7 @@ var el = document.getElementById("myList");
 var data;
 var tabletop;
 //This is for the function that creates the male female thing and prints the location
-function packingList(){
+function setUp(){
 	gender = document.getElementById("who").value;
 	baby = document.getElementById("baby").value;
  	var feed = new Instafeed({

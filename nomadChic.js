@@ -94,6 +94,9 @@ function showInfo(data, listName, tabletop) {
 
 function makeList(data, tabletop){ 
 	showInfo(data, "Essentials", tabletop);
+	showInfo(data, "Medical", tabletop);
+	showInfo(data, "Hygiene", tabletop);
+	showInfo(data, "Electronics", tabletop);
 
 	//Call Electronics
 	//This is for if it is a female
@@ -101,6 +104,7 @@ function makeList(data, tabletop){
 
 		//Call fEssentials
 		showInfo(data, "fEssentials", tabletop);
+		showInfo(data, "fHygiene", tabletop);
 		
 		//Call fHygiene		
 	}
@@ -115,18 +119,22 @@ function makeList(data, tabletop){
 	//This is for the temperature Blazing
 	if (temp=="B"){
 		showInfo(data, "eBlazing", tabletop);
+		showInfo(data, "Beach/Pool", tabletop);
 	}
 	//This is for the temperature Hot
 	else if (temp=="H"){
 		showInfo(data, "eHot", tabletop);
+		showInfo(data, "Beach/Pool", tabletop);
 	}
 	//This will pull the list for Warm
 	else if (temp=="W"){
 	showInfo(data, "eWarm", tabletop);
+	showInfo(data, "Beach/Pool", tabletop);	
 	}
 	//This will pull the list for Cool
 	else if (temp=="Cl"){
-		showInfo(data, "eCool", tabletop);			
+		showInfo(data, "eCool", tabletop);
+		showInfo(data, "Beach/Pool", tabletop);		
 	}
 	//This will pull the list for Cold
 	else if (temp=="Cd"){

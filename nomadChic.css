@@ -1,10 +1,3 @@
-/*
-body {
-  padding: 45px 0;
-  font: 13px 'Open Sans', "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  background: #1192d3;
-}*/
-
 ul#menu li {
     display: inline;
 }
@@ -30,8 +23,8 @@ p
 {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;  
-    font-size: 18px;  
-    color: white;
+    font-size: 22px;  
+    color: black;
     margin-left: 20%;
     margin-right: 20%;
     margin-bottom: 1%;
@@ -43,13 +36,18 @@ h1
 {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
+    font-size: 45px;
+    color: white;
 }
 
 body {
-  background-image: url("oldSuitcases.jpg");
+  background-image: url("oldWood.jpg");
 }
 
-
+#small
+{
+    font-size: 15px;
+}
 
 /*Makes item float to the center of the page*/
 #centerthis
@@ -58,13 +56,16 @@ body {
 }
 
 #blackback, p {
-    top:250px;
-    left:140px;
-    width:500px;
+    top:10%;
+    left:10%;
+    width:60%;
     height:text;
-    background-color:black;
+    background-color: #85C7BF;
+    border-radius: 10px;
+    color: black;
+    text-align: center;
     z-index:0;
-    opacity:0.7;
+    opacity:0.8;
 }
 
 
@@ -124,7 +125,7 @@ body {
 
 
 .ui-page.ui-body-c {
-    background: url(oldSuitcases.jpg);
+    background: url(oldWood.jpg);
     background-repeat:no-repeat;
     background-position:center center;
     background-size:cover;  

@@ -1,10 +1,12 @@
 //api.openweathermap.org/data/2.5/forecast?q={city name},{country code}
-   var loc=document.getElementById("dest").value;
+   function setTemp(){
+   var loc=document.getElementById("where").value;
    console.log(loc);
+
 
   $(document).ready(function() {
   $.simpleWeather({
-    location: 'loc', //2357536
+    location: loc, //2357536
     woied:'',
     unit: 'f',
     success: function(weather) {
@@ -24,15 +26,16 @@
     }
   });
 });
+}
 
 
-    var feed = new Instafeed({
-        get: 'tagged',
-        tagName: 'outfitoftheday',
-        clientId: 'dd5e29ec36214e2a91b4913c2d97a25f'
-    });
-    console.log(feed);
-    feed.run();
+    // var feed = new Instafeed({
+    //     get: 'tagged',
+    //     tagName: 'outfitoftheday',
+    //     clientId: 'dd5e29ec36214e2a91b4913c2d97a25f'
+    // });
+    // console.log(feed);
+    // feed.run();
 
 
 var gender;
@@ -42,6 +45,13 @@ function packingList(){
 	var gender= document.getElementById("who").value;
 	var loc=document.getElementById("where").value;
  	console.log(gender);
+ 	  var feed = new Instafeed({
+        get: 'tagged',
+        tagName: 'outfitoftheday',
+        clientId: 'dd5e29ec36214e2a91b4913c2d97a25f'
+    });
+    console.log(feed);
+    feed.run();
  	//console.log(loc);
 }
 

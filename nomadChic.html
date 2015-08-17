@@ -63,14 +63,17 @@
 			<br><br>
 			<!--This is for selecting where you're going-->
 			<label for='Where Are You Going'>Type in Your Trip Destination:</label><br>
-			<input type="text" name="dest" value="Type in your Destination" id="dest"><br>
+			<input type="text" name="dest" value="Type in your Destination" id="where"><br>
+
+			<a href="#listpage" onclick="setTemp()">Find Out What Your Weather Is Going To be Like</a><br><br>
+
 			<!--This is for when you select when you're going-->
-			<label for='When Will You be There'>Select you travel dates:</label><br>
+			<label for='When Will You be There'>When Are You Going:</label><br>
 			<input type='menu' name='when' id='when'>
 			<br><br>
 			<!--This is for the different weather settings-->
 			<!--<form id="tempe" action="">-->
-			<label for='Select the Temperature'>Select the Temperature:</label><br>
+			<label for='Select the Temperature Category'>What Temperature Category is This For You?:</label><br>
 			<select id="tempe">
 			<option value="N">Select the Temperature</option>
 			<option value="B">Blazing (95+ F)</option>
@@ -84,7 +87,7 @@
 
 			<!--<button type= "button" onclick="packingList()">Start Your Packing List</button>-->
 
-			<a href="#listpage" onclick="packingList(), tempList(), init()"> Start Your Packing List</a>
+			<a href="#listpage" onclick="setTemp(), packingList(), tempList(), init()"> Start Your Packing List</a>
 
 
 		  </div>

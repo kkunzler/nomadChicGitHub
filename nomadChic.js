@@ -1,5 +1,4 @@
-//api.openweathermap.org/data/2.5/forecast?q={city name},{country code}
-  //This is the temperature function that takes what the user put into the where are you going text box
+//This is the temperature function that takes what the user put into the where are you going text box
 function setTemp(){
    var loc=document.getElementById("where").value;
    console.log(loc);
@@ -26,16 +25,7 @@ function setTemp(){
 	  });
 }
 
-
-    // var feed = new Instafeed({
-    //     get: 'tagged',
-    //     tagName: 'outfitoftheday',
-    //     clientId: 'dd5e29ec36214e2a91b4913c2d97a25f'
-    // });
-    // console.log(feed);
-    // feed.run();
-
-
+//This is the variables we use
 var gender;
 var baby;
 var temp;
@@ -43,10 +33,11 @@ var el = document.getElementById("myList");
 var insta = document.getElementById("instafeed");
 var data;
 var tabletop;
-//This is for the function that creates the male female thing and prints the location
+//This is for the function that creates the male/female option and prints the location
 function setUp(){
 	gender = document.getElementById("who").value;
 	baby = document.getElementById("baby").value;
+ 	//This is what generates the instagram feed
  	var feed = new Instafeed({
         get: 'tagged',
         tagName: 'outfitoftheday',
@@ -87,7 +78,7 @@ function showInfo(data, listName, tabletop) {
 	 	}
 }
 
-
+//This is the function that has all of our lists
 function makeList(data, tabletop){ 
 	showInfo(data, "Essentials", tabletop);
 	showInfo(data, "Medical", tabletop);

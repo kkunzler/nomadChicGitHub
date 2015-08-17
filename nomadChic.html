@@ -1,36 +1,31 @@
+<html lang="en">
+
 	<head>
 	  <title>nomadChic</title>
-
-
-	  <!-- This creates the little picture thing that shows up on the left side of the tab in the browser.  It is a suitcase-->
-	  <link rel="icon" type="image/png" href="favicon.ico" sizes="32x32" />`
-
+	  <link rel="stylesheet" href="nomadChic.css">
 	  <script type="text/javascript" src="tabletop.js"></script>
 	  <meta charset="utf-8">
 
-	  <!--load jQuery-->
-	  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-			
-	  <!-- Load jQuery Mobile -->
-	  <script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
-		    
-	  <link rel="stylesheet" href="nomadChic.css">
-	  <!-- Mobile Stylesheet -->
-	  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
+			<!--load jQuery-->
+		    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+		    <!-- Load jQuery Mobile -->
+		    <script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+
+		    <!-- Mobile Stylesheet -->
+		    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
 
 	</head>
 
 	<body>
-
-		<!-- Creates new page called mainpage -->
 	<ul class="popular"> </ul>
 		<div data-role="page" id="mainpage">
 		  <div data-role="main" class="ui-content">
-		  		<!-- This is the header menu -->
 		  		<ul id="menu">
 		  			<br>
 		  			<li><a href="#mainpage">Main Page</a></li>
 					<li><a href="#addtrip">Add a Trip</a></li>
+					<li><a href="#createaccount">Create an Account</a></li>
 					<li><a href="#signin">Sign In</a></li>
 					<li><a href="#aboutus">About Us</a></li>
 					<li><a href="#settings">Settings</a></li>
@@ -44,77 +39,63 @@
 			 </div>
 		  </div>
 		</div>
-<!-- 		</div>
- -->
-		<!-- Creates new page called Add Trip-->
+
 		<div data-role="page" id="addtrip">
 		  <div data-role="main" class="ui-content">
-		  	<!-- This is the header menu -->
 		  	<ul id="menu">
 		  			<br>
 		  			<li><a href="#mainpage">Main Page</a></li>
 		  			<li><a href="#addtrip">Add a Trip</a></li>
+					<li><a href="#createaccount">Create an Account</a></li>
 					<li><a href="#signin">Sign In</a></li>
 					<li><a href="#aboutus">About Us</a></li>
 					<li><a href="#settings">Settings</a></li>
+				</ul>
 
 		  	<h1>Welcome to NomadChic!</h1>
 			<!--This is for selecting your gender-->
-			<label for='Who Are You'>Select your style:</label><br>
+			<label for='Who Are You'>Select your gender:</label><br>
 			<select id="who"> 
-			  <option value="G">Select Your style here</option>
-			  <option value="Male">Masculine</option>
-			  <option value="Female">Feminine</option>
+			  <option value="G">Select Your Gender</option>
+			  <option value="Male">Male</option>
+			  <option value="Female">Female</option>
 			</select>
 			<br><br>
 			<!--This is for selecting where you're going-->
-			Destination: <input type="text" id="where" value="Type Your Destination">
-			<!--<label for='Where Are You Going'>Type in Your Trip Destination:</label><br>
-			<textarea name='where' id='where'></textarea>-->
+			<label for='Where Are You Going'>Type in Your Trip Destination:</label><br>
+			<input type="text" name="dest" value="Type your destination" id="dest"><br>
+			<!--<input type="text" name="FirstName" value="Mickey"><br>
+			<textarea name='place,state' id='Dest'></textarea>
+			<br><br>-->
+			<!--This is for when you select when you're going-->
+			<label for='When Will You be There'>Select you travel dates:</label><br>
+			<input type='menu' name='when' id='when'>
 			<br><br>
 			<!--This is for the different weather settings-->
 			<!--We need to figure out how to fix this-->
 			<!--<form id="tempe" action="">-->
-			<label for='Select the Temperature'>Select the average temperature of your destinaiton:</label><br>
+			<label for='Select the Temperature'>Select the Temperature:</label><br>
 			<select id="tempe">
-			<option value="N">Select the Temperature here</option>
+			<option value="N">Select the Temperature</option>
 			<option value="B">Blazing (95+ F)</option>
 			<option value="H">Hot (80-95 F)</option>
 			<option value="W">Warm (70-80 F)</option>
-			<option value="Cl">Cool (50-70 F)</option>	
-			<option value="Cd">Cold (30-50 F</option>			
+			<option value="Cl">Cool (50-70 F)</option>
+			<option value="Cd">Cold (30-50 F</option>
 			<option value="F">Frigid (-30)</option>
 			</select>
 			<!--</form>-->
 
-			<a href="#listpage" onclick="packingList(), tempList()"> Start Your Packing List</a>
 			<!--<button type= "button" onclick="packingList()">Start Your Packing List</button>-->
+
+			<a href="#listpage" onclick="packingList(), tempList(), init()"> Start Your Packing List</a>
+
+
 		  </div>
 		</div>
 
-		<!-- Creates a new page called Sign In -->
-		<div data-role="page" id="signin">
-		  <div data-role="main" class="ui-content">
-		  	<!-- This is the header menu -->
-		  	<ul id="menu">
-		  			<br>
-		  			<li><a href="#mainpage">Main Page</a></li>
-					<li><a href="#addtrip">Add a Trip</a></li>
-					<li><a href="#signin">Sign In</a></li>
-					<li><a href="#aboutus">About Us</a></li>
-					<li><a href="#settings">Settings</a></li>
-				</ul>
-
-			<!-- This will later have a sign in through google plus -->
-		  	<h1>Welcome to NomadChic!</h1>
-			<p>This will be the google+ sign-in</p>
-			<p>Don't have an account? Click here!</p>
-			<li><a href="#createaccount">Create an Account</a></li>
-
-		<!-- Creates a new page called Create Account -->
 		<div data-role="page" id="createaccount">
 		  <div data-role="main" class="ui-content">
-		  	<!-- This is the header menu -->
 		  	<ul id="menu">
 		  			<br>
 		  			<li><a href="#mainpage">Main Page</a></li>
@@ -124,22 +105,12 @@
 					<li><a href="#aboutus">About Us</a></li>
 					<li><a href="#settings">Settings</a></li>
 				</ul>
-
-				<!-- This will later contain a sign up through google plus -->
 		  	<h1>Welcome to NomadChic!</h1>
-
 			<p>This create account page is coming soon!</p>
-			<p>Here, we will need a username/email box and a password box.</p>
-			<p>There could also be options for a profile pic or something else later.</p>
-
 		  </div>
 		</div> 
-		</div>
-
-		<!-- Creates a new page called About Us -->
-		<div data-role="page" id="aboutus">
+		<div data-role="page" id="signin">
 		  <div data-role="main" class="ui-content">
-		  	<!-- This is the header menu -->
 		  	<ul id="menu">
 		  			<br>
 		  			<li><a href="#mainpage">Main Page</a></li>
@@ -149,8 +120,23 @@
 					<li><a href="#aboutus">About Us</a></li>
 					<li><a href="#settings">Settings</a></li>
 				</ul>
+		  	<h1>Welcome to NomadChic!</h1>
+			<p>This sign in page is coming soon!</p>
 
-			<!-- This will later contain short bios and possibly pictures of us -->
+		  </div>
+		</div>
+
+		<div data-role="page" id="aboutus">
+		  <div data-role="main" class="ui-content">
+		  	<ul id="menu">
+		  			<br>
+		  			<li><a href="#mainpage">Main Page</a></li>
+					<li><a href="#addtrip">Add a Trip</a></li>
+					<li><a href="#createaccount">Create an Account</a></li>
+					<li><a href="#signin">Sign In</a></li>
+					<li><a href="#aboutus">About Us</a></li>
+					<li><a href="#settings">Settings</a></li>
+				</ul>
 		  	<h1>Welcome to NomadChic!</h1>
 			<p>We are four girls who attended / are attending Girls Who Code at Adobe in Seattle, the summer of 2015.</p>
 			<p>Girls Who Code is a 7-week long intensive learning classroom. Together, we've learned Python, Scratch, HTML, CSS, Processing Javascript, jQuery, and other API's including Mapbox and Tabletop.  We learned basic logic structures, starting with loops and progressing all the way to dictionaries and libraries.</p>
@@ -163,63 +149,59 @@
 			   Isabel Brunkan - 16<br>
 			   Katie Kunzler - 17<br>
 			</p>
+
 		  </div>
 		</div>
 
-		<!-- Creates a new page called Settings -->
 		<div data-role="page" id="settings">
 		  <div data-role="main" class="ui-content">
-		  	<!-- This is the header menu -->
 		  	<ul id="menu">
 		  			<br>
 		  			<li><a href="#mainpage">Main Page</a></li>
 					<li><a href="#addtrip">Add a Trip</a></li>
+					<li><a href="#createaccount">Create an Account</a></li>
 					<li><a href="#signin">Sign In</a></li>
 					<li><a href="#aboutus">About Us</a></li>
 					<li><a href="#settings">Settings</a></li>
 				</ul>
-
-			<div>	
-			  	<h1>Welcome to NomadChic!</h1>
-				<p>This settings page is coming soon!</p>
-				<p>This will later contain options for changing the color scheme, your password, and other things </p>
-			</div>
-
+		  	<h1>Welcome to NomadChic!</h1>
+			<p>This settings page is coming soon!</p>
 		  </div>
 		</div>
 
-		<!-- Creates a new page called List Page -->
+
 		<div data-role="page" id="listpage">
 			<div data-role="main" class="ui-content">
-				<!-- This is the header menu -->
 				<ul id="menu">
 		  			<br>
 		  			<li><a href="#mainpage">Main Page</a></li>
 					<li><a href="#addtrip">Add a Trip</a></li>
+					<li><a href="#createaccount">Create an Account</a></li>
 					<li><a href="#signin">Sign In</a></li>
 					<li><a href="#aboutus">About Us</a></li>
 					<li><a href="#settings">Settings</a></li>
 				</ul>
-
-			<div id="section">
-				<!-- This will later contain the packing list made from the user's input -->
 				<div id="myList"></div>
-				<p>This will be the packing list. We'll add stuff here soon.</p>
+				<p>This will be the packing list. We'll add stuff soon.</p>
+
 			</div>
 		<div>
+
+
+
+		<div data-role="page" id="settings">
+			<p>This will be your packing list</p>
+		</div>
 
 		<script type="text/javascript" src="instafeed.js-master/instafeed.js"></script>
 
 	</body>
-
-	<!-- Loads Processing Javascript -->
 	<div id="instafeed">
 	<script type="text/javascript" src="processing-1.4.1.js"></script>
-	<!-- Loads JQuery -->
 	</div>
-	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places"></script>
-    <script src="jquery-1.11.3.js"></script>
-    <!-- Loads Local JS file -->
+	<script type="text/javascript" src="monkeecreate-jquery.simpleWeather-ed11490/jquery.simpleWeather.js"></script>
+   <!-- <script src="jquery-1.11.3.js"></script>-->
 	<script type="text/javascript" src="nomadChic.js"></script>
+	<div id="weather"></div>
 
 </html>

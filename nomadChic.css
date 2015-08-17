@@ -1,3 +1,28 @@
+/*
+body {
+  padding: 45px 0;
+  font: 13px 'Open Sans', "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  background: #1192d3;
+}*/
+
+ul#menu li {
+    display: inline;
+}
+
+ul#menu li a {
+    background-color: #008AB8;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px 5px 5px 5px;
+}
+
+ul#menu li a:hover {
+	color: black;
+    background-color: #FFFFCC;
+}
+
+
 /*These all apply only to the p tag.  Makes the font a sans-serif font.
   Aligns the text to the center.  Sets top and bottom margins to 2%.  
   Sets left and right margins to 20%.  */
@@ -62,42 +87,40 @@ body {
 
 
 
-/*"All items with the #menu are for the header menu at the top of the page*/
-ul#menu {
-    padding: 5;
+#weather {
+  width: 425px;
+  margin: 0px auto;
+  text-align: center;
+  text-transform: uppercase;
 }
 
-ul#menu li {
-    display: inline;
+#weather h2 {
+  margin: 0 0 8px;
+  color: #fff;
+  font-size: 150px;
+  font-weight: 300;
+  text-align: center;
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
 }
 
-ul#menu li a {
-    background-color: #008AB8;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px 5px 5px 5px;
+#weather ul {
+  margin: 0;
+  padding: 0;
 }
 
-ul#menu li a:hover {
-    color: black;
-    background-color: #FFFFCC;
+#weather li {
+  background: #fff;
+  background: rgba(255,255,255,0.90);
+  padding: 20px;
+  display: inline-block;
+  border-radius: 5px;
 }
 
-/*
-body {
-    background: url(oldSuitcases.jpg);
-    background-repeat:repeat-y;
-    background-position:center center;
-    background-attachment:scroll;
-    background-size:100% 100%;
+#weather .currently {
+  margin: 0 20px;
 }
-.ui-page {
-    background: transparent;
-}
-.ui-content{
-    background: transparent;
-}*/
+
+
 
 .ui-page.ui-body-c {
     background: url(oldSuitcases.jpg);

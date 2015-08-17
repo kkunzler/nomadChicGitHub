@@ -1,19 +1,35 @@
-ul#menu li {
-    display: inline;
-}
-
-ul#menu li a {
+#menu {
     background-color: #94DDD4;
-    color: #636369;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px 5px 5px 5px;
+    -webkit-box-shadow: 0 0 3px #000;
+    -moz-box-shadow: 0 0 3px #000;
+    box-shadow: 0 0 3px #000;
+    text-align: left;
+    height: 50px;
+    width: 100%;
+}
+#menu {
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    padding: 0 15px;
+    height:42px;
+    float: left;
+}
+#menu li {
+    display:block;
+    float: left;
+    line-height: 42px;
+    
+}
+#menu li:first-child {
+    padding-right: 8px;
+}
+#menu a {
+    text-decoration:none;
+    border-left: solid 1px black;
+    padding: 0 8px;
+    color: black;
 }
 
-ul#menu li a:hover {
-	color: black;
-    background-color: #FFFCDF;
-}
 
 /*These all apply only to the p tag.  Makes the font a sans-serif font.
   Aligns the text to the center.  Sets top and bottom margins to 2%.  
@@ -86,6 +102,7 @@ body {
     text-align: center;
     z-index:0;
     opacity:0.8;
+    margin-top: 70px;
 }
 
 #blackbacksm {
@@ -105,7 +122,7 @@ body {
 {
     top:10%;
     left:10%;
-    width:60%;
+    width:50%;
     height:text;
     background-color: #85C7BF;
     border-radius: 10px;
@@ -116,6 +133,7 @@ body {
     padding: 10px;
     z-index:0;
     opacity:0.8;
+    margin-top: 60px;
 }
 
 /*Makes button in the middle of the page*/
@@ -176,4 +194,23 @@ body {
     background-repeat:no-repeat;
     background-position:center center;
     background-size:cover;  
+}
+
+
+#button li {
+    display: inline;
+    height: 100px;
+}
+
+#button li a {
+    background-color: #94DDD4;
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+#button li a:hover {
+    color: black;
+    background-color: #FFFCDF;
 }

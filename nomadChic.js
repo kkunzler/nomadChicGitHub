@@ -64,6 +64,7 @@ function tempList(){
 
 var public_spreadsheet_url = "https://docs.google.com/spreadsheets/d/1eDDhMYGf9UVa8BcxHzRHeRxennwnP3GVauADiPr3OTk/pubhtml";
 function init() {
+	el.innerHTML = "";
     Tabletop.init( { key: public_spreadsheet_url,
                      callback: makeList,
                      simpleSheet: true } )

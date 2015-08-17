@@ -46,6 +46,10 @@ h1
     color: white;
 }
 
+h4
+{
+    margin: 3px;
+}
 body {
   background-image: url("oldWood.jpg");
 }
@@ -100,6 +104,22 @@ body {
     opacity:0.8;
 }
 
+#mylist
+{
+    top:10%;
+    left:10%;
+    width:60%;
+    height:text;
+    background-color: #85C7BF;
+    border-radius: 10px;
+    color: black;
+    text-align: left;
+    font-size: 23px;
+    margin-left: 2%;
+    padding: 10px;
+    z-index:0;
+    opacity:0.8;
+}
 
 /*Makes button in the middle of the page*/
 /*Not working currently*/
@@ -152,7 +172,6 @@ body {
 #weather .currently {
   margin: 0 20px;
 }
-
 
 
 .ui-page.ui-body-c {

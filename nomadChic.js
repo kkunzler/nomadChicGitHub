@@ -12,12 +12,8 @@ var gender;
 var temp;
 //This is for the function that creates the male female thing and prints the location
 function packingList(){
-<<<<<<< HEAD
-	gender= document.getElementById("who").value;
-=======
 	var gender= document.getElementById("who").value;
 	var loc=document.getElementById("where").value;
->>>>>>> origin/master
  	console.log(gender);
  	console.log(loc);
 }

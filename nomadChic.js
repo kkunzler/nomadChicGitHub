@@ -1,31 +1,30 @@
 //api.openweathermap.org/data/2.5/forecast?q={city name},{country code}
+  //This is the temperature function that takes what the user put into the where are you going text box
    function setTemp(){
    var loc=document.getElementById("where").value;
    console.log(loc);
 
+	  $.simpleWeather({
+	    location: loc, //2357536
+	    woied:'',
+	    unit: 'f',
+	    success: function(weather) {
+	      html = '<h2>'+weather.temp+'&deg;'+weather.units.temp+'</h2>';
+	      html += '<ul><li>'+weather.city+', '+weather.region+'</li>';
+	      html += '<li class="currently">'+weather.currently+'</li>';
+	      html += '<li>'+weather.alt.temp+'&deg;C</li></ul>';
+	      
+	      for(var i=0;i<weather.forecast.length;i++) {
+	        html += '<p>'+weather.forecast[i].day+': '+weather.forecast[i].high+'</p>';
+	      }
+	  
+	      $("#weather").html(html);
+	    },
+	    error: function(error) {
+	      $("#weather").html('<p>'+error+'</p>');
+	    }
+	  });
 
-  $(document).ready(function() {
-  $.simpleWeather({
-    location: loc, //2357536
-    woied:'',
-    unit: 'f',
-    success: function(weather) {
-      html = '<h2>'+weather.temp+'&deg;'+weather.units.temp+'</h2>';
-      html += '<ul><li>'+weather.city+', '+weather.region+'</li>';
-      html += '<li class="currently">'+weather.currently+'</li>';
-      html += '<li>'+weather.alt.temp+'&deg;C</li></ul>';
-      
-      for(var i=0;i<weather.forecast.length;i++) {
-        html += '<p>'+weather.forecast[i].day+': '+weather.forecast[i].high+'</p>';
-      }
-  
-      $("#weather").html(html);
-    },
-    error: function(error) {
-      $("#weather").html('<p>'+error+'</p>');
-    }
-  });
-});
 }
 
 

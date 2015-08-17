@@ -2,10 +2,7 @@
    var loc=document.getElementById("dest").value;
    console.log(loc);
 
-
-
-
-    $(document).ready(function() {
+  $(document).ready(function() {
   $.simpleWeather({
     location: 'loc', //2357536
     woied:'',

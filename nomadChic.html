@@ -25,27 +25,26 @@
 		  			<br>
 		  			<li><a href="#mainpage">Main Page</a></li>
 					<li><a href="#addtrip">Add a Trip</a></li>
-					<li><a href="#createaccount">Create an Account</a></li>
 					<li><a href="#signin">Sign In</a></li>
 					<li><a href="#aboutus">About Us</a></li>
 					<li><a href="#settings">Settings</a></li>
 				</ul>
-		  	<h1><center>Welcome to NomadChic!</h1>
-			<p><center>This main page is coming soon!</p>
-
-		  </div>
-		  </div>
-		  </div>
+			<h1>Welcome to NomadChic!</h1>	
+			<p>This website will help make sure you never forget anything on vacation, ever again.  It'll ask you about yourself and give you a packing list made especially for you.  Put in where you're going, how long you'll be there, and a few other things about yourself and you'll be prepared for an awesome vacation, hassle-free. </p>
+			<p>This is still a work in progress - we know! Feel free to contact us at blahblahblah@email.com with any issues or feature suggestions.</p>
+			<div id="section">		  	
+				<!-- This will later contain other things -->
+				<p>Click the "Add A Trip" button to begin your list.</p>
+			 </div>
 		  </div>
 		</div>
-		<!--This is for setting up the main page-->
+
 		<div data-role="page" id="addtrip">
 		  <div data-role="main" class="ui-content">
 		  	<ul id="menu">
 		  			<br>
 		  			<li><a href="#mainpage">Main Page</a></li>
 		  			<li><a href="#addtrip">Add a Trip</a></li>
-					<li><a href="#createaccount">Create an Account</a></li>
 					<li><a href="#signin">Sign In</a></li>
 					<li><a href="#aboutus">About Us</a></li>
 					<li><a href="#settings">Settings</a></li>
@@ -62,16 +61,12 @@
 			<br><br>
 			<!--This is for selecting where you're going-->
 			<label for='Where Are You Going'>Type in Your Trip Destination:</label><br>
-			<input type="text" name="dest" value="Type your destination" id="dest"><br>
-			<!--<input type="text" name="FirstName" value="Mickey"><br>
-			<textarea name='place,state' id='Dest'></textarea>
-			<br><br>-->
+			<input type="text" name="dest" value="Type in your Destination" id="dest"><br>
 			<!--This is for when you select when you're going-->
 			<label for='When Will You be There'>Select you travel dates:</label><br>
 			<input type='menu' name='when' id='when'>
 			<br><br>
 			<!--This is for the different weather settings-->
-			<!--We need to figure out how to fix this-->
 			<!--<form id="tempe" action="">-->
 			<label for='Select the Temperature'>Select the Temperature:</label><br>
 			<select id="tempe">
@@ -93,13 +88,30 @@
 		  </div>
 		</div>
 
+		<div data-role="page" id="signin">
+		  <div data-role="main" class="ui-content">
+		  	<ul id="menu">
+		  			<br>
+		  			<li><a href="#mainpage">Main Page</a></li>
+					<li><a href="#addtrip">Add a Trip</a></li>
+					<li><a href="#signin">Sign In</a></li>
+					<li><a href="#aboutus">About Us</a></li>
+					<li><a href="#settings">Settings</a></li>
+				</ul>
+		  	<h1>Welcome to NomadChic!</h1>
+			<p>This sign in page is coming soon!</p>
+			<p>Don't Have an account? Sign in here!</p>
+			<ul id="menu" ><li><a href="#createaccount">Create an Account</a></li></ul>
+
+		  </div>
+		</div>
+
 		<div data-role="page" id="createaccount">
 		  <div data-role="main" class="ui-content">
 		  	<ul id="menu">
 		  			<br>
 		  			<li><a href="#mainpage">Main Page</a></li>
 					<li><a href="#addtrip">Add a Trip</a></li>
-					<li><a href="#createaccount">Create an Account</a></li>
 					<li><a href="#signin">Sign In</a></li>
 					<li><a href="#aboutus">About Us</a></li>
 					<li><a href="#settings">Settings</a></li>
@@ -108,30 +120,13 @@
 			<p>This create account page is coming soon!</p>
 		  </div>
 		</div> 
-		<div data-role="page" id="signin">
-		  <div data-role="main" class="ui-content">
-		  	<ul id="menu">
-		  			<br>
-		  			<li><a href="#mainpage">Main Page</a></li>
-					<li><a href="#addtrip">Add a Trip</a></li>
-					<li><a href="#createaccount">Create an Account</a></li>
-					<li><a href="#signin">Sign In</a></li>
-					<li><a href="#aboutus">About Us</a></li>
-					<li><a href="#settings">Settings</a></li>
-				</ul>
-		  	<h1>Welcome to NomadChic!</h1>
-			<p>This sign in page is coming soon!</p>
-
-		  </div>
-		</div>
-
+		
 		<div data-role="page" id="aboutus">
 		  <div data-role="main" class="ui-content">
 		  	<ul id="menu">
 		  			<br>
 		  			<li><a href="#mainpage">Main Page</a></li>
 					<li><a href="#addtrip">Add a Trip</a></li>
-					<li><a href="#createaccount">Create an Account</a></li>
 					<li><a href="#signin">Sign In</a></li>
 					<li><a href="#aboutus">About Us</a></li>
 					<li><a href="#settings">Settings</a></li>
@@ -141,12 +136,11 @@
 			<p>Girls Who Code is a 7-week long intensive learning classroom. Together, we've learned Python, Scratch, HTML, CSS, Processing Javascript, jQuery, and other API's including Mapbox and Tabletop.  We learned basic logic structures, starting with loops and progressing all the way to dictionaries and libraries.</p>
 			<p>We worked in groups and individually and we created games, websites, and random thing generators.  We learned the value of self-confidence, basic public speaking skills, and how to work well in a team.</p>
 			<p>Each Girls Who Code participant received a mentor, and met with her weekly for one-on-one sessions.  We set goals, talked about our passions, and thought about our futures. </p>
-			<p>We ate a lot of good food, made a lot of good friends, and learned a lot of great things.  Girls Who Code isn't something we will forget.</p>
 			<p id = "centerthis">
-			   Chloe Dawson - 17<br>
-			   Delaney Ochs - 16<br>
-			   Isabel Brunkan - 16<br>
-			   Katie Kunzler - 17<br>
+			   Chloe D. - 17<br>
+			   Delaney O. - 16<br>
+			   Isabel B. - 16<br>
+			   Katie K. - 17<br>
 			</p>
 
 		  </div>
@@ -158,7 +152,6 @@
 		  			<br>
 		  			<li><a href="#mainpage">Main Page</a></li>
 					<li><a href="#addtrip">Add a Trip</a></li>
-					<li><a href="#createaccount">Create an Account</a></li>
 					<li><a href="#signin">Sign In</a></li>
 					<li><a href="#aboutus">About Us</a></li>
 					<li><a href="#settings">Settings</a></li>
@@ -168,14 +161,12 @@
 		  </div>
 		</div>
 
-
 		<div data-role="page" id="listpage">
 			<div data-role="main" class="ui-content">
 				<ul id="menu">
 		  			<br>
 		  			<li><a href="#mainpage">Main Page</a></li>
 					<li><a href="#addtrip">Add a Trip</a></li>
-					<li><a href="#createaccount">Create an Account</a></li>
 					<li><a href="#signin">Sign In</a></li>
 					<li><a href="#aboutus">About Us</a></li>
 					<li><a href="#settings">Settings</a></li>
@@ -185,12 +176,6 @@
 
 			</div>
 		<div>
-
-
-
-		<div data-role="page" id="settings">
-			<p>This will be your packing list</p>
-		</div>
 
 		<script type="text/javascript" src="instafeed.js-master/instafeed.js"></script>
 

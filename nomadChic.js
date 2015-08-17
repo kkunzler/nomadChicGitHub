@@ -2,10 +2,7 @@
    var loc=document.getElementById("dest").value;
    console.log(loc);
 
-
-
-
-    $(document).ready(function() {
+  $(document).ready(function() {
   $.simpleWeather({
     location: 'loc', //2357536
     woied:'',
@@ -46,8 +43,8 @@ var gender;
 var temp;
 //This is for the function that creates the male female thing and prints the location
 function packingList(){
-
-	gender= document.getElementById("who").value;
+	var gender= document.getElementById("who").value;
+	var loc=document.getElementById("where").value;
  	console.log(gender);
 }
 

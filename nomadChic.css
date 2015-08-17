@@ -1,13 +1,91 @@
-/*"All items with the #menu are for the header menu at the top of the page*/
-ul#menu {
-    padding: 5;
-}
-
+/*
 body {
   padding: 45px 0;
   font: 13px 'Open Sans', "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   background: #1192d3;
+}*/
+
+ul#menu li {
+    display: inline;
 }
+
+ul#menu li a {
+    background-color: #008AB8;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px 5px 5px 5px;
+}
+
+ul#menu li a:hover {
+	color: black;
+    background-color: #FFFFCC;
+}
+
+
+/*These all apply only to the p tag.  Makes the font a sans-serif font.
+  Aligns the text to the center.  Sets top and bottom margins to 2%.  
+  Sets left and right margins to 20%.  */
+p
+{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;  
+    font-size: 18px;  
+    color: white;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 1%;
+    margin-top: 1%;
+}
+
+/*Aligns text to the center.*/
+h1
+{
+    text-align: center;
+}
+
+body {
+  background-image: url("oldSuitcases.jpg");
+}
+
+
+
+/*Makes item float to the center of the page*/
+#centerthis
+{
+    text-align: center;
+}
+
+#blackback, p {
+    top:250px;
+    left:140px;
+    width:500px;
+    height:text;
+    background-color:black;
+    z-index:0;
+    opacity:0.7;
+}
+
+
+
+/*Makes button in the middle of the page*/
+/*Not working currently*/
+.floatingbuttons
+{
+    margin: auto;
+    width: 99%;
+    float: center;
+    border-radius: 5px;
+}
+
+.container {
+    width: 100px;
+    height: 180px; 
+    margin-top: 15px;
+    margin-left:15px;
+}
+
+
 
 #weather {
   width: 425px;
@@ -42,119 +120,11 @@ body {
   margin: 0 20px;
 }
 
-/*.ui-mobile .type-home .ui-content { 
-    background: white url("oldSuitcases.jpg"); 
-    background-repeat: no-repeat; background-position: 50% 80%; /*50% 80% mozilla optimized*/ 
-    /*background-attachment: fixed; 
-    background-size: 50%; /*50% mozilla optimized */ 
 
 
-/*.ui-page{
-    background:url("oldSuitcases.jpg") no-repeat;
-    background-size:cover;
-}*/
-
-ul#menu li {
-    display: inline;
-}
-
-ul#menu li a {
-    background-color: #008AB8;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px 5px 5px 5px;
-}
-
-ul#menu li a:hover {
-	color: black;
-    background-color: #FFFFCC;
-}
-
-/*Makes item float to the center of the page*/
-#centerthis
-{
-	text-align: center;
-}
-
-/*Makes button in the middle of the page*/
-/*Not working currently*/
-.floatingbuttons
-{
-	margin: auto;
-	width: 99%;
-	float: center;
-	border-radius: 5px;
-}
-
-
-/*
-#mainpage {
-    background-color:transparent;
-    color:black;
-    text-align:center;
-    padding:5px;
-}
-#menu {
-    line-height:30px;
-    background-color:transparent;
-    height:400px;
-    width:200px;
-    float:left;
-    padding:5px; 
-}
-#section {
-    width:350px;
-    float:left;
-    padding:10px; 
-}
-#footer {
-    background-color:black;
-    color:white;
-    clear:both;
-    text-align:center;
-    padding:5px; 
-}
-*/
-
-/*These all apply only to the p tag.  Makes the font a sans-serif font.
-  Aligns the text to the center.  Sets top and bottom margins to 2%.  
-  Sets left and right margins to 20%.  */
-p
-{
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;  
-    font-size: 18px;  
-    color: white;
-    margin-left: 20%;
-    margin-right: 20%;
-    margin-bottom: 1%;
-    margin-top: 1%;
-}
-
-/*Aligns text to the center.*/
-h1
-{
-    text-align: center;
-}
-
-#blackback, p {
-    top:250px;
-    left:140px;
-    width:500px;
-    height:text;
-    background-color:black;
-    z-index:0;
-    opacity:0.7;
-}
-
-.container {
-    width: 100px;
-    height: 180px; 
-    margin-top: 15px;
-    margin-left:15px;
-}
-body {
-  background-image: url("oldSuitcases.jpg");
-  console.log("background working");
+.ui-page.ui-body-c {
+    background: url(oldSuitcases.jpg);
+    background-repeat:no-repeat;
+    background-position:center center;
+    background-size:cover;  
 }

@@ -39,10 +39,10 @@
 
 var gender;
 var temp;
+var el = document.getElementById("myList");
 //This is for the function that creates the male female thing and prints the location
 function packingList(){
-	var gender= document.getElementById("who").value;
-	//var loc=document.getElementById("where").value;
+	gender= document.getElementById("who").value;
  	console.log(gender);
  	  var feed = new Instafeed({
         get: 'tagged',
@@ -82,31 +82,84 @@ function tempList(){
 // 		return true;
 // 	}
 // }
+
 var essentialsList=[];
 var fEssentialsList=[];
+var mEssentialsList=[];
+var eBlazingList=[];
+var eHotList=[];
+var eWarmList=[];
+var eCoolList=[];
+var eColdList=[];
+var eFrigidList=[];
+
 
   //This shows the essentials list
 function showEssentialsInfo(data, tabletop) {
     alert("Essentials")
 
-		var el = document.getElementById("myList");
 	 	console.log(data);
+	 	el.innerHTML="<h4>Essentials</h4>"
 		for (var i = 0; i < data.length; i++) {
-			el.innerHTML += "<label for='newsletter'>Essentials</label><br><input type='checkbox' name='newsletter' id='newsletter'>" + data[i].Essentials;
+
+			if (data[i].Essentials==""){
+				return false;
+		 		}
+
+			el.innerHTML += "<br><input type='checkbox' name='newsletter' id='newsletter'>" + data[i].Essentials;
 			console.log(data[i].Essentials);	
-		 	essentialsList.push(data[i].Essentials);
+		 	essentialsList.push(data[i].Essentials);	 	
+		 	
 	 	}	
 }
 
 function showfEssentialsInfo(data, tabletop) {
     alert("fEssentials")
 
-		var el = document.getElementById("myList");
 	 	console.log(data);
+	 	el.innerHTML+="<h4>Female Essentials</h4>"
 		for (var i = 0; i < data.length; i++) {
-			el.innerHTML += "<label for='newsletter'>fEssentials</label><br><input type='checkbox' name='newsletter' id='newsletter'>" + data[i].fEssentials;
+
+			if (data[i].fEssentials==""){
+				return false;
+		 		}
+
+			el.innerHTML += "<br><input type='checkbox' name='newsletter' id='newsletter'>" + data[i].fEssentials;
 			console.log(data[i].fEssentials);	
 		 	fEssentialsList.push(data[i].fEssentials);
+	 	}
+}
+
+function showmEssentialsInfo(data, tabletop) {
+    alert("mEssentials")
+
+	 	console.log(data);
+	 	el.innerHTML+="<h4>Male Essentials</h4>"
+		for (var i = 0; i < data.length; i++) {
+
+			if (data[i].mEssentials==""){
+				return false;
+		 		}
+
+			el.innerHTML += "<br><input type='checkbox' name='newsletter' id='newsletter'>" + data[i].mEssentials;
+			console.log(data[i].mEssentials);	
+		 	mEssentialsList.push(data[i].mEssentials);
+	 	}	
+}
+
+function showeBlazingInfo(data, tabletop) {
+    alert("eBlazing")
+
+	 	console.log(data);
+		for (var i = 0; i < data.length; i++) {
+
+			if (data[i].eBlazing==""){
+				return false;
+		 		}
+
+			el.innerHTML += "<br><input type='checkbox' name='newsletter' id='newsletter'>" + data[i].eBlazing;
+			console.log(data[i].eBlazing);	
+		 	eBlazingList.push(data[i].eBlazing);
 	 	}	
 }
 
@@ -121,9 +174,9 @@ function makeList(data, tabletop){
 	if (gender=="Female") {
 
 		alert('Female packing list will be activated');
-		
-		showfEssentialsInfo(data, tabletop);
 		//Call fEssentials
+		showfEssentialsInfo(data, tabletop);
+		
 		//Call fHygiene
 		//This is for the temperature Blazing
 		if (temp=="B"){
@@ -154,6 +207,8 @@ function makeList(data, tabletop){
 	else {
 		alert('Male packing list will be activated');
 		//Call mEssentials
+		showmEssentialsInfo(data, tabletop);
+
 		//This is for the temperature Blazing
 		if (temp=="B"){
 			alert('Blazing packing list will be activated');

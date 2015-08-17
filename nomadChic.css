@@ -77,7 +77,7 @@ body {
     left:10%;
     width:60%;
     height:text;
-    background-color: #493100;
+    background-color: #41251A;
     border-radius: 10px;
     color: white;
     text-align: center;
@@ -85,6 +85,18 @@ body {
     opacity:0.8;
 }
 
+#blackbacksm {
+    top:10%;
+    left:10%;
+    width:60%;
+    height:text;
+    background-color: #85C7BF;
+    border-radius: 5px;
+    color: black;
+    text-align: center;
+    z-index:0;
+    opacity:0.8;
+}
 
 
 /*Makes button in the middle of the page*/

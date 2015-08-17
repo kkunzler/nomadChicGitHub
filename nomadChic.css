@@ -37,6 +37,10 @@ h1
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     font-size: 45px;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 3%;
+    margin-top: 4%;
     color: white;
 }
 
@@ -63,6 +67,19 @@ body {
     background-color: #85C7BF;
     border-radius: 10px;
     color: black;
+    text-align: center;
+    z-index:0;
+    opacity:0.8;
+}
+
+#welcome {
+    top:10%;
+    left:10%;
+    width:60%;
+    height:text;
+    background-color: #493100;
+    border-radius: 10px;
+    color: white;
     text-align: center;
     z-index:0;
     opacity:0.8;

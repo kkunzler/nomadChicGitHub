@@ -98,49 +98,49 @@ function makeList(data, tabletop){
 	//This is for if it is a female
 	if (gender=="Female") {
 
-		//Call fEssentials
-		showInfo(data, "fEssentials", tabletop);
-		showInfo(data, "fHygiene", tabletop);
+		//Call Female Essentials
+		showInfo(data, "Female Essentials", tabletop);
+		showInfo(data, "Female Hygiene", tabletop);
 		
-		//Call fHygiene		
+		//Call Female Hygiene		
 	}
 
 	//This is for if it is a male
 	else {
-		showInfo(data, "mEssentials", tabletop);
+		showInfo(data, "Male Essentials", tabletop);
 	}
 
 	if (baby=="Yes"){
-		showInfo(data, "bEssentials")
+		showInfo(data, "Baby Essentials")
 	}
 
 
 	//This is for the temperature Blazing
 	if (temp=="B"){
-		showInfo(data, "eBlazing", tabletop);
+		showInfo(data, "Blazing", tabletop);
 		showInfo(data, "Beach/Pool", tabletop);
 	}
 	//This is for the temperature Hot
 	else if (temp=="H"){
-		showInfo(data, "eHot", tabletop);
+		showInfo(data, "Hot", tabletop);
 		showInfo(data, "Beach/Pool", tabletop);
 	}
 	//This will pull the list for Warm
 	else if (temp=="W"){
-	showInfo(data, "eWarm", tabletop);
+	showInfo(data, "Warm", tabletop);
 	showInfo(data, "Beach/Pool", tabletop);	
 	}
 	//This will pull the list for Cool
 	else if (temp=="Cl"){
-		showInfo(data, "eCool", tabletop);
+		showInfo(data, "Cool", tabletop);
 		showInfo(data, "Beach/Pool", tabletop);		
 	}
 	//This will pull the list for Cold
 	else if (temp=="Cd"){
-		showInfo(data, "eCold", tabletop);
+		showInfo(data, "Cold", tabletop);
 	}
 	//This will pull the list for Frigid
 	else{
-		showInfo(data, "eFrigid", tabletop);
+		showInfo(data, "Frigid", tabletop);
 	}
 }

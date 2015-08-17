@@ -1,6 +1,6 @@
 //api.openweathermap.org/data/2.5/forecast?q={city name},{country code}
   //This is the temperature function that takes what the user put into the where are you going text box
-   function setTemp(){
+function setTemp(){
    var loc=document.getElementById("where").value;
    console.log(loc);
 
@@ -38,46 +38,42 @@
 
 
 var gender;
+var baby;
 var temp;
 var el = document.getElementById("myList");
+var data;
+var tabletop;
 //This is for the function that creates the male female thing and prints the location
 function packingList(){
-	gender= document.getElementById("who").value;
- 	console.log(gender);
- 	  var feed = new Instafeed({
+	gender = document.getElementById("who").value;
+	baby = document.getElementById("baby").value;
+ 	var feed = new Instafeed({
         get: 'tagged',
         tagName: 'outfitoftheday',
         clientId: 'dd5e29ec36214e2a91b4913c2d97a25f'
     });
     console.log(feed);
     feed.run();
- 	//console.log(loc);
 }
 
 
 //This is for the temperature lists
 function tempList(){
-	temp= document.getElementById("tempe").value;
- 	console.log(temp);
-}	
+	temp = document.getElementById("tempe").value;
+}
 
-
-  var data;
-  var tabletop;
-  // window.onload = function() { init() };
-
-  var public_spreadsheet_url = "https://docs.google.com/spreadsheets/d/1eDDhMYGf9UVa8BcxHzRHeRxennwnP3GVauADiPr3OTk/pubhtml";
-  function init() {
+var public_spreadsheet_url = "https://docs.google.com/spreadsheets/d/1eDDhMYGf9UVa8BcxHzRHeRxennwnP3GVauADiPr3OTk/pubhtml";
+function init() {
     Tabletop.init( { key: public_spreadsheet_url,
                      callback: makeList,
                      simpleSheet: true } )
-  }
+}
 
 
-  //This shows the lists
+//This shows the lists
 function showInfo(data, listName, tabletop) {
 
-	 	console.log(data);
+
 	 	el.innerHTML+="<h4>" + listName + "</h4>"
 		for (var i = 0; i < data.length; i++) {
 
@@ -86,9 +82,7 @@ function showInfo(data, listName, tabletop) {
 		 		}
 
 			el.innerHTML += "<br><input type='checkbox' name='newsletter' id='newsletter'>" + data[i][listName];
-			console.log(data[i][listName]);	
-		 	
-	 	}	
+	 	}
 }
 
 
@@ -114,6 +108,9 @@ function makeList(data, tabletop){
 		showInfo(data, "mEssentials", tabletop);
 	}
 
+	if (baby=="Yes"){
+		showInfo(data, "bEssentials")
+	}
 
 
 	//This is for the temperature Blazing

@@ -56,6 +56,7 @@ var gender;
 var baby;
 var temp;
 var el = document.getElementById("myList");
+var insta = document.getElementById("instafeed");
 var data;
 var tabletop;
 //This is for the function that creates the male female thing and prints the location
@@ -68,6 +69,7 @@ function setUp(){
         clientId: 'dd5e29ec36214e2a91b4913c2d97a25f'
     });
     console.log(feed);
+    insta.innerHTML = "";
     feed.run();
 }
 

@@ -64,6 +64,12 @@ h2
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     font-size: 45px;
+    background-color: #85C7BF;
+    border-radius: 10px;
+    color: black;
+    padding: 10px;
+    z-index:0;
+    opacity:0.8;
 }
 
 h4

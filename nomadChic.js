@@ -73,165 +73,67 @@ function tempList(){
                      simpleSheet: true } )
   }
 
-// function test(data){
-// 	for (var i = 0; i < data.length-1; i++){
-// 		if (data[i].Essentials==""){
-// 			return false;
-// 		}
 
-// 		return true;
-// 	}
-// }
-
-var essentialsList=[];
-var fEssentialsList=[];
-var mEssentialsList=[];
-var eBlazingList=[];
-var eHotList=[];
-var eWarmList=[];
-var eCoolList=[];
-var eColdList=[];
-var eFrigidList=[];
-
-
-  //This shows the essentials list
-function showEssentialsInfo(data, tabletop) {
-    alert("Essentials")
+  //This shows the lists
+function showInfo(data, listName, tabletop) {
 
 	 	console.log(data);
-	 	el.innerHTML="<h4>Essentials</h4>"
+	 	el.innerHTML+="<h4>" + listName + "</h4>"
 		for (var i = 0; i < data.length; i++) {
 
-			if (data[i].Essentials==""){
+			if (data[i][listName]==""){
 				return false;
 		 		}
 
-			el.innerHTML += "<br><input type='checkbox' name='newsletter' id='newsletter'>" + data[i].Essentials;
-			console.log(data[i].Essentials);	
-		 	essentialsList.push(data[i].Essentials);	 	
+			el.innerHTML += "<br><input type='checkbox' name='newsletter' id='newsletter'>" + data[i][listName];
+			console.log(data[i][listName]);	
 		 	
 	 	}	
 }
 
-function showfEssentialsInfo(data, tabletop) {
-    alert("fEssentials")
-
-	 	console.log(data);
-	 	el.innerHTML+="<h4>Female Essentials</h4>"
-		for (var i = 0; i < data.length; i++) {
-
-			if (data[i].fEssentials==""){
-				return false;
-		 		}
-
-			el.innerHTML += "<br><input type='checkbox' name='newsletter' id='newsletter'>" + data[i].fEssentials;
-			console.log(data[i].fEssentials);	
-		 	fEssentialsList.push(data[i].fEssentials);
-	 	}
-}
-
-function showmEssentialsInfo(data, tabletop) {
-    alert("mEssentials")
-
-	 	console.log(data);
-	 	el.innerHTML+="<h4>Male Essentials</h4>"
-		for (var i = 0; i < data.length; i++) {
-
-			if (data[i].mEssentials==""){
-				return false;
-		 		}
-
-			el.innerHTML += "<br><input type='checkbox' name='newsletter' id='newsletter'>" + data[i].mEssentials;
-			console.log(data[i].mEssentials);	
-		 	mEssentialsList.push(data[i].mEssentials);
-	 	}	
-}
-
-function showeBlazingInfo(data, tabletop) {
-    alert("eBlazing")
-
-	 	console.log(data);
-		for (var i = 0; i < data.length; i++) {
-
-			if (data[i].eBlazing==""){
-				return false;
-		 		}
-
-			el.innerHTML += "<br><input type='checkbox' name='newsletter' id='newsletter'>" + data[i].eBlazing;
-			console.log(data[i].eBlazing);	
-		 	eBlazingList.push(data[i].eBlazing);
-	 	}	
-}
-
-
 
 function makeList(data, tabletop){ 
-	showEssentialsInfo(data, tabletop);
+	showInfo(data, "Essentials", tabletop);
 
-  //showInfo(Essentials,tabletop);
 	//Call Electronics
 	//This is for if it is a female
 	if (gender=="Female") {
 
-		alert('Female packing list will be activated');
 		//Call fEssentials
-		showfEssentialsInfo(data, tabletop);
+		showInfo(data, "fEssentials", tabletop);
 		
-		//Call fHygiene
-		//This is for the temperature Blazing
-		if (temp=="B"){
-			alert('Blazing packing list will be activated');
-		}
-		//This is for the temperature Hot
-		else if (temp=="H"){
-			alert('Hot packing list will be activated');
-		}
-		//This will pull the list for Warm
-		else if (temp=="W"){
-			alert('Warm packing list will be activated');
-		}
-		//This will pull the list for Cool
-		else if (temp=="Cl"){
-			alert('Cool packing list will be activated');			
-		}
-		//This will pull the list for Cold
-		else if (temp=="Cd"){
-			alert('Cold packing list will be activated');
-		}
-		//This will pull the list for Frigid
-		else{
-			alert('Frigid packing list will be activated');
-		}
+		//Call fHygiene		
 	}
+
 	//This is for if it is a male
 	else {
-		alert('Male packing list will be activated');
-		//Call mEssentials
-		showmEssentialsInfo(data, tabletop);
+		showInfo(data, "mEssentials", tabletop);
+	}
 
-		//This is for the temperature Blazing
-		if (temp=="B"){
-			alert('Blazing packing list will be activated');
-		}
-		//This is for the temperature Hot
-		else if (temp=="H"){
-			alert('Hot packing list will be activated');
-		}
-		//This will pull the list for Warm
-		else if (temp=="W"){
-			alert('Warm packing list will be activated');
-		}
-		//This will pull the list for Cool
-		else if (temp=="Cl"){
-			alert('Cool packing list will be activated');
-		}
-		//This will pull the list for Cold
-		else if (temp=="Cd"){
-			alert('Cold packing list will be activated');
-		}
-		//This will pull the list for Frigid
-		else{
-			alert('Frigid packing list will be activated');
-		}
+
+
+	//This is for the temperature Blazing
+	if (temp=="B"){
+		showInfo(data, "eBlazing", tabletop);
+	}
+	//This is for the temperature Hot
+	else if (temp=="H"){
+		showInfo(data, "eHot", tabletop);
+	}
+	//This will pull the list for Warm
+	else if (temp=="W"){
+	showInfo(data, "eWarm", tabletop);
+	}
+	//This will pull the list for Cool
+	else if (temp=="Cl"){
+		showInfo(data, "eCool", tabletop);			
+	}
+	//This will pull the list for Cold
+	else if (temp=="Cd"){
+		showInfo(data, "eCold", tabletop);
+	}
+	//This will pull the list for Frigid
+	else{
+		showInfo(data, "eFrigid", tabletop);
 	}
 }

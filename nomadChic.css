@@ -15,7 +15,9 @@ ul#menu li a:hover {
     background-color: #FFFCDF;
 }
 
-
+#button {
+  visibility: "hidden";
+}
 /*These all apply only to the p tag.  Makes the font a sans-serif font.
   Aligns the text to the center.  Sets top and bottom margins to 2%.  
   Sets left and right margins to 20%.  */

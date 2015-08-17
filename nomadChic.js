@@ -24,7 +24,7 @@
 	      $("#weather").html('<p>'+error+'</p>');
 	    }
 	  });
-
+	   button.style.visibility = "hidden";
 }
 
 

@@ -72,17 +72,21 @@
 
 			<!--This is for selecting where you're going-->
 			<label for='Where Are You Going'>Type in Your Trip Destination:</label><br>
-			<input type="text" name="dest" value="Type in your Destination" id="dest"><br>
-			<p id= "weather"></p><br><br>
+			<input type="text" name="dest" value="Type in your Destination" id="where"><br>
+
+			<button type="button" onclick="setTemp()">See What The Temperature Is Going To Be Like</button><br><br>
+
+			<p id="weather"></p><br><br>
+
 			<!--This is for when you select when you're going-->
 			<label for='When Will You be There'>Select you travel dates:</label><br>
 			<input type='menu' name='when' id='when'>
 			<br><br>
 			<!--This is for the different weather settings-->
 			<!--<form id="tempe" action="">-->
-			<label for='Select the Temperature'>Select the Temperature:</label><br>
+			<label for='Select the Temperature'>How Would This Feel to You?</label><br>
 			<select id="tempe">
-			<option value="N">Select the Temperature</option>
+			<option value="N">Select the Temperature Category</option>
 			<option value="B">Blazing (95+ F)</option>
 			<option value="H">Hot (80-95 F)</option>
 			<option value="W">Warm (70-80 F)</option>

@@ -10,8 +10,8 @@ ul#menu li {
 }
 
 ul#menu li a {
-    background-color: #008AB8;
-    color: white;
+    background-color: #94DDD4;
+    color: #636369;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px 5px 5px 5px;
@@ -19,7 +19,7 @@ ul#menu li a {
 
 ul#menu li a:hover {
 	color: black;
-    background-color: #FFFFCC;
+    background-color: #FFFCDF;
 }
 
 
@@ -38,9 +38,10 @@ p
     margin-top: 1%;
 }
 
-/*Aligns text to the center.*/
+/*Aligns text to the center. Sets font to Sans-Serif*/
 h1
 {
+    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
 }
 

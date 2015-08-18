@@ -78,14 +78,15 @@ function init() {
 function showInfo(data, listName, tabletop) {
 
 
-	 	el.innerHTML+="<h4>" + listName + "</h4>"
+	 	el.innerHTML+="<h4>" + listName + "</h4>" + "<ul id='nobullet'>";
 		for (var i = 0; i < data.length; i++) {
 
 			if (data[i][listName]==""){
+				el.innerHTML+="</ul>";
 				return false;
 		 		}
 
-			el.innerHTML += "<br><input type='checkbox' name='newsletter' id='newsletter'>" + data[i][listName];
+			el.innerHTML += "<li><input type='checkbox' name='newsletter' id='newsletter'>" + data[i][listName] + "</li>";
 	 	}
 }
 

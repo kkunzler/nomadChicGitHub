@@ -135,7 +135,7 @@ body {
 {
     top:10%;
     left:10%;
-    width:50%;
+    width:70%;
     height:text;
     background-color: #85C7BF;
     border-radius: 10px;
@@ -237,4 +237,26 @@ IMG.centerimage
     display: block;
     margin-left: auto;
     margin-right: auto; 
+}
+
+
+/*#newsletter:hover 
+{ 
+  background-color: #FFF; 
+  border: 1px gray solid; 
+  width: 2em; 
+} 
+/*, #newsletter .focus */
+
+#newsletter { 
+/*  border: 1px transparent solid; 
+/**/  /*display: block;*/
+/*  width: 2em;
+*/  float: left;
+  width: 25%;
+}
+
+#nobullet 
+{
+    list-style: none !important;
 }

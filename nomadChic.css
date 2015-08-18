@@ -231,3 +231,10 @@ body {
     color: black;
     background-color: #FFFCDF;
 }
+
+IMG.centerimage
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+}

@@ -40,7 +40,7 @@ function setUp(){
  	//This is what generates the instagram feed
  	var feed = new Instafeed({
         get: 'tagged',
-        tagName: 'outfitofthedaygwc',
+        tagName: 'outfitofthedaygwc, loc',
         clientId: 'dd5e29ec36214e2a91b4913c2d97a25f'
     });
     console.log(feed);

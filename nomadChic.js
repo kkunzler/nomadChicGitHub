@@ -147,6 +147,6 @@ function makeList(data, tabletop){
 	}
 
 	else{
-		el.innerHTML = "To view a packing list, go back to the Add a Trip page and fill in your information. Then click Start Your Packing List"
+		el.innerHTML = "To view a packing list, go back to the Add a Trip page and finish filling in your information. Then click Start Your Packing List"
 	}
 }

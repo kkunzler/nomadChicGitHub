@@ -97,7 +97,7 @@ function makeList(data, tabletop){
 	}
 
 	//This is for if it is a male
-	else {
+	if (gender=="Male"){
 		showInfo(data, "Male Essentials", tabletop);
 	}
 
@@ -131,7 +131,11 @@ function makeList(data, tabletop){
 		showInfo(data, "Cold", tabletop);
 	}
 	//This will pull the list for Frigid
-	else{
+	else if (temp=="F"){
 		showInfo(data, "Frigid", tabletop);
+	}
+
+	else{
+		el.innerHTML = "To view a packing list, go back to the Add a Trip page and fill in your information. Then click Start Your Packing List"
 	}
 }

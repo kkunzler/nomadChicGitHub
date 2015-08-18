@@ -39,13 +39,24 @@ function setUp(){
 	baby = document.getElementById("baby").value;
  	//This is what generates the instagram feed
  	var feed = new Instafeed({
+ 		target:"outfittag",
         get: 'tagged',
-        tagName: 'outfitofthedaygwc, loc',
+        tagName: 'outfitofthedaygwc',
         clientId: 'dd5e29ec36214e2a91b4913c2d97a25f'
     });
+    //This is where the insta posts from each city would show up
+ //    var locfeed = new Instafeed({
+ //    target:"loctag",
+ //    get: 'tagged',
+ //    tagName: loc,
+ //    clientId: 'dd5e29ec36214e2a91b4913c2d97a25f',
+ //    // rest of settings
+	// });
     console.log(feed);
+    //console.log(locfeed);
     insta.innerHTML = "";
     feed.run();
+    //locfeed.run();
 }
 
 
